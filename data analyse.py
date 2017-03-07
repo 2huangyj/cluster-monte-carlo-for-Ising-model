@@ -7,6 +7,13 @@ M = pd.read_csv("result.csv", usecols=[1]) # I want the 3rd col
 C = pd.read_csv("result.csv", usecols=[2])
 chi = pd.read_csv("result.csv", usecols=[3])
 ksai = pd.read_csv("result.csv", usecols=[4])
+'''
+T =( pd.read_csv("result.csv", usecols=[0])).dropna(thresh = 1) 
+M = (pd.read_csv("result.csv", usecols=[1])).dropna(thresh = 1) 
+C = pd.read_csv("result.csv", usecols=[2]).dropna(thresh = 1)
+chi = pd.read_csv("result.csv", usecols=[3]).dropna(thresh = 1)
+ksai = pd.read_csv("result.csv", usecols=[4]).dropna(thresh = 1)'''
+
 T = T.as_matrix().reshape(T.shape[0],)
 M = M.as_matrix().reshape(M.shape[0],)
 C = C.as_matrix().reshape(C.shape[0],)
